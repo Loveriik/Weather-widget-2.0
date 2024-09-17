@@ -6,6 +6,10 @@
   animation: side-to-side 4s ease-in-out infinite;
 }
 
+.toSpin {
+  animation: spinner 1s ease infinite;
+}
+
 @keyframes side-to-side {
   0% {
     transform: translateX(0);
@@ -17,5 +21,15 @@
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

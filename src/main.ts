@@ -84,6 +84,8 @@ class WeatherWidget {
     time?: string
   ): Promise<void> {
     try {
+      this.showSpinner(true);
+
       const response = await fetch(
         `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lat},${long}?unitGroup=metric&key=${this.weatherApiKey}`
       );
@@ -175,11 +177,20 @@ class WeatherWidget {
     }
   }
 
+  private showSpinner = (mode: boolean): void => {
+    if (!mode) {
+      this.spinner.classList.add("hidden");
+      this.widgetBody.classList.remove("hidden");
+    } else {
+      this.spinner.classList.remove("hidden");
+      this.widgetBody.classList.add("hidden");
+    }
+  };
+
   private setWeather(time: number, data: Weather): void {
     this.temperatureNow.textContent =
       Math.floor(data.currentConditions.temp).toString() + "°C";
 
-    console.log(data);
     this.setBackground(data.currentConditions.temp);
     this.setIcon(data.currentConditions.icon, this.cornerIcon);
 
@@ -246,8 +257,7 @@ class WeatherWidget {
       maxHTMLElement.textContent = maxTemp.toString();
     });
 
-    this.spinner.classList.add("hidden");
-    this.widgetBody.classList.remove("hidden");
+    this.showSpinner(false);
   }
 }
 
