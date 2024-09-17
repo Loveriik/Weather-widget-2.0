@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/Weather-Widget-2.0/",
+  base: "/Weather-widget-2.0/",
 });
