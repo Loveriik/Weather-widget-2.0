@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Weather widget 2.0</title>
+    <script type="module" crossorigin src="/Weather-Widget-2.0/assets/index-B1gjhN8F.js"></script>
+    <link rel="stylesheet" crossorigin href="/Weather-Widget-2.0/assets/index-D0B5jE0r.css">
+  </head>
+  <body class="relative w-full h-lvh sm:grid sm:place-items-center font-modern">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <i class="ri-loop-right-line text-7xl spinner animate-spin"></i>
+    </div>
+    <div
+      class="hidden relative w-full sm:max-w-[500px] sm:rounded-xl p-8 widgetBody"
+    >
+      <form
+        class="duration-200 focus-within:shadow-lg flex items-center gap-2 bg-slate-50 p-2 w-full rounded-lg"
+        id="form"
+      >
+        <input
+          id="formInput"
+          class="outline-none w-5/6 border-none bg-transparent py-1 text-sm"
+          type="text"
+          name="city"
+          placeholder="Type in a city"
+          pattern="[A-Za-z\-]+"
+          title="Only letters are allowed"
+          required
+        />
+        <button type="submit" class="flex-1 group">
+          <i
+            class="duration-300 group-hover:scale-105 ri-search-line text-lg cursor-pointer text-center"
+          ></i>
+        </button>
+      </form>
+      <img
+        class="drop-shadow-lg w-28 h-28 sm:w-36 sm:h-36 absolute right-10 top-24 bigIcon rotation"
+      />
+      <div class="mt-10 flex flex-col pb-6 border-b border-black">
+        <h4 class="text-sm text-black sm:text-base city">in Austin is</h4>
+        <span class="max-w-56 text-xl sm:text-3xl font-semibold description"
+          >sunny</span
+        >
+        <span class="text-4xl sm:text-6xl font-semibold" id="tempNow"></span>
+      </div>
+
+      <div class="py-6 border-b border-black flex justify-between">
+        <div class="flex flex-col items-center gap-2 tempAtHour">
+          <p class="time">now</p>
+          <img class="drop-shadow-lg w-10 h-10" />
+          <p class="temperature">33C</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 tempAtHour">
+          <p class="time">2pm</p>
+          <img class="drop-shadow-lg w-10 h-10" />
+          <p class="temperature">33C</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 tempAtHour">
+          <p class="time">3pm</p>
+          <img class="drop-shadow-lg w-10 h-10" />
+          <p class="temperature">33C</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 tempAtHour">
+          <p class="time">4pm</p>
+          <img class="drop-shadow-lg w-10 h-10" />
+          <p class="temperature">33C</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 tempAtHour">
+          <p class="time">5pm</p>
+          <img class="drop-shadow-lg w-10 h-10" />
+          <p class="temperature">33C</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 tempAtHour">
+          <p class="time">6pm</p>
+          <img class="drop-shadow-lg w-10 h-10" />
+          <p class="temperature">33C</p>
+        </div>
+      </div>
+
+      <ul class="mt-8 w-full flex flex-col gap-4 list-none">
+        <li class="flex items-center justify-between">
+          <div class="flex w-48 justify-between items-center gap-3 weekDay">
+            <h2 class="text-2xl font-semibold">Saturday</h2>
+            <img class="drop-shadow-lg w-10 h-10" />
+          </div>
+
+          <div class="flex items-center w-16 justify-between minmax">
+            <p class="text-2xl font-semibold max">36</p>
+            <p class="text-2xl opacity-60 min">22</p>
+          </div>
+        </li>
+        <li class="flex items-center justify-between">
+          <div class="flex w-48 justify-between items-center gap-3 weekDay">
+            <h2 class="text-2xl font-semibold">Saturday</h2>
+            <img class="drop-shadow-lg w-10 h-10" />
+          </div>
+
+          <div class="flex items-center w-16 justify-between minmax">
+            <p class="text-2xl font-semibold max">36</p>
+            <p class="text-2xl opacity-60 min">22</p>
+          </div>
+        </li>
+        <li class="flex items-center justify-between">
+          <div class="flex w-48 justify-between items-center gap-3 weekDay">
+            <h2 class="text-2xl font-semibold">Saturday</h2>
+            <img class="drop-shadow-lg w-10 h-10" />
+          </div>
+
+          <div class="flex items-center w-16 justify-between minmax">
+            <p class="text-2xl font-semibold max">36</p>
+            <p class="text-2xl opacity-60 min">22</p>
+          </div>
+        </li>
+        <li class="flex items-center justify-between">
+          <div class="flex w-48 justify-between items-center gap-3 weekDay">
+            <h2 class="text-2xl font-semibold">Saturday</h2>
+            <img class="drop-shadow-lg w-10 h-10" />
+          </div>
+
+          <div class="flex items-center w-16 justify-between minmax">
+            <p class="text-2xl font-semibold max">36</p>
+            <p class="text-2xl opacity-60 min">22</p>
+          </div>
+        </li>
+        <li class="flex items-center justify-between">
+          <div class="flex w-48 justify-between items-center gap-3 weekDay">
+            <h2 class="text-2xl font-semibold">Saturday</h2>
+            <img class="drop-shadow-lg w-10 h-10" />
+          </div>
+
+          <div class="flex items-center w-16 justify-between minmax">
+            <p class="text-2xl font-semibold max">36</p>
+            <p class="text-2xl opacity-60 min">22</p>
+          </div>
+        </li>
+        <li class="flex items-center justify-between">
+          <div class="flex w-48 justify-between items-center gap-3 weekDay">
+            <h2 class="text-2xl font-semibold">Saturday</h2>
+            <img class="drop-shadow-lg w-10 h-10" />
+          </div>
+
+          <div class="flex items-center w-16 justify-between minmax">
+            <p class="text-2xl font-semibold max">36</p>
+            <p class="text-2xl opacity-60 min">22</p>
+          </div>
+        </li>
+        <li class="flex items-center justify-between">
+          <div class="flex w-48 justify-between items-center gap-3 weekDay">
+            <h2 class="text-2xl font-semibold">Saturday</h2>
+            <img class="drop-shadow-lg w-10 h-10" />
+          </div>
+
+          <div class="flex items-center w-16 justify-between minmax">
+            <p class="text-2xl font-semibold max">36</p>
+            <p class="text-2xl opacity-60 min">22</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </body>
+</html>
