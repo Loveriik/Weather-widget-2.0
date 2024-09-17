@@ -107,39 +107,39 @@ class WeatherWidget {
   private setIcon(type: string, img: HTMLImageElement): void {
     switch (type) {
       case WeatherIcon.CLEARDAY:
-        img.src = "../icons/clear-day.png";
+        img.src = "../public/icons/clear-day.png";
         img.alt = "clear-day";
         break;
       case WeatherIcon.CLOUDY:
-        img.src = "../icons/cloudy.png";
+        img.src = "../public/icons/cloudy.png";
         img.alt = "cloudy";
         break;
       case WeatherIcon.FOG:
-        img.src = "../icons/fog.png";
+        img.src = "../public/icons/fog.png";
         img.alt = "fog";
         break;
       case WeatherIcon.CLEARNIGHT:
-        img.src = "../icons/clear-night.png";
+        img.src = "../public/icons/clear-night.png";
         img.alt = "clear-night";
         break;
       case WeatherIcon.RAIN:
-        img.src = "../icons/rain.png";
+        img.src = "../public/icons/rain.png";
         img.alt = "rain";
         break;
       case WeatherIcon.SNOW:
-        img.src = "../icons/snow.png";
+        img.src = "../public/icons/snow.png";
         img.alt = "snow";
         break;
       case WeatherIcon.WIND:
-        img.src = "../icons/wind.png";
+        img.src = "../public/icons/wind.png";
         img.alt = "wind";
         break;
       case WeatherIcon.PARTLYCLOUDYDAY:
-        img.src = "../icons/cloudy-day.png";
+        img.src = "../public/icons/cloudy-day.png";
         img.alt = "cloudy day";
         break;
       case WeatherIcon.PARTLYCLOUDYNIGHT:
-        img.src = "../icons/cloudy-night.png";
+        img.src = "../public/icons/cloudy-night.png";
         img.alt = "cloudy night";
         break;
     }
