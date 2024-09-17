@@ -53,7 +53,7 @@ class WeatherWidget {
         return;
       }
 
-      const cityUrl = `http://api.openweathermap.org/geo/1.0/direct?q=<${city}>&appid=${this.coordinatesApiKey}`;
+      const cityUrl = `https://api.openweathermap.org/geo/1.0/direct?q=<${city}>&appid=${this.coordinatesApiKey}`;
 
       const response = await fetch(cityUrl);
       const data: GetCoordinatesFromUser[] = await response.json();
