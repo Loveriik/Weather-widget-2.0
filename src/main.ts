@@ -179,8 +179,9 @@ class WeatherWidget {
     this.temperatureNow.textContent =
       Math.floor(data.currentConditions.temp).toString() + "°C";
 
+    console.log(data);
     this.setBackground(data.currentConditions.temp);
-    this.setIcon(data.days[0].icon, this.cornerIcon);
+    this.setIcon(data.currentConditions.icon, this.cornerIcon);
 
     this.cityName.textContent = `in ${data.timezone.split("/")[1]} is`;
 
