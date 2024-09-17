@@ -105,41 +105,42 @@ class WeatherWidget {
   }
 
   private setIcon(type: string, img: HTMLImageElement): void {
+    const basePath = "https://loveriik.github.io/Weather-widget-2.0/";
     switch (type) {
       case WeatherIcon.CLEARDAY:
-        img.src = "/icons/clear-day.png";
+        img.src = `${basePath}/icons/clear-day.png`;
         img.alt = "clear-day";
         break;
       case WeatherIcon.CLOUDY:
-        img.src = "/icons/cloudy.png";
+        img.src = `${basePath}/icons/cloudy.png`;
         img.alt = "cloudy";
         break;
       case WeatherIcon.FOG:
-        img.src = "/icons/fog.png";
+        img.src = `${basePath}/icons/fog.png`;
         img.alt = "fog";
         break;
       case WeatherIcon.CLEARNIGHT:
-        img.src = "/icons/clear-night.png";
+        img.src = `${basePath}/icons/clear-night.png`;
         img.alt = "clear-night";
         break;
       case WeatherIcon.RAIN:
-        img.src = "/icons/rain.png";
+        img.src = `${basePath}/icons/rain.png`;
         img.alt = "rain";
         break;
       case WeatherIcon.SNOW:
-        img.src = "/icons/snow.png";
+        img.src = `${basePath}/icons/snow.png`;
         img.alt = "snow";
         break;
       case WeatherIcon.WIND:
-        img.src = "/icons/wind.png";
+        img.src = `${basePath}/icons/wind.png`;
         img.alt = "wind";
         break;
       case WeatherIcon.PARTLYCLOUDYDAY:
-        img.src = "/icons/cloudy-day.png";
+        img.src = `${basePath}/icons/cloudy-day.png`;
         img.alt = "cloudy day";
         break;
       case WeatherIcon.PARTLYCLOUDYNIGHT:
-        img.src = "/icons/cloudy-night.png";
+        img.src = `${basePath}/icons/cloudy-night.png`;
         img.alt = "cloudy night";
         break;
     }
