@@ -7,6 +7,10 @@
 }
 
 .toSpin {
+  position: absolute;
+  top: 47%;
+  left: 47%;
+
   animation: spinner 1s ease infinite;
 }
 

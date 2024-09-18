@@ -192,10 +192,7 @@ class WeatherWidget {
       Math.floor(data.currentConditions.temp).toString() + "°C";
 
     this.setBackground(data.currentConditions.temp);
-    this.setIcon(data.currentConditions.icon, this.cornerIcon);
-
     this.cityName.textContent = `in ${data.timezone.split("/")[1]} is`;
-
     this.description.textContent = data.days[0].conditions;
 
     //* Building up an array for a six hours forecast
@@ -211,6 +208,8 @@ class WeatherWidget {
         ...data.days[1].hours.slice(0, requiredNumberOfDays),
       ];
     }
+
+    this.setIcon(hours[0].icon, this.cornerIcon);
 
     //* Setting up temperatures for every hour
     this.temperatureAtHourContainer.forEach((item, index) => {
